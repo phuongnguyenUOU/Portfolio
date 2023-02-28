@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bubble.css">
+    <title>Phuong Nguyen</title>
+</head>
+
+<body>
+    <!------------------------------ Blossom Animation ------------------------------>
+    <div id="blossom_container"></div>
+    <!------------------------------ Home ------------------------------>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="https://cdn.glitch.global/fbf777df-a536-4696-8e24-d7c1303a6a5b/logomaker1.png?v=1677067269234"
+                    class="logo">
+                <ul id="mobile-menu">
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                    <li><a href="#header">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+                <p onclick="openMenu()"><i class="fas fa-bars" onclick="openMenu()"></i></p>
+            </nav>
+            <div class="header-text">
+                <p>FRONTEND DEVELOPER<span class="color">_</span></p>
+                <h1 class="main-title">Hi, I'm <span class="color">P</span>huong Nguyen<br>
+                    ReactJS <span class="bgcolor">Web Developer</span></h1>
+            </div>
+            <button class="btn" id="gooey-button">Contact Me
+                <!-- bubble effect -->
+                <span class="bubbles">
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="gooey">
+                            <!-- in="sourceGraphic" -->
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                                result="highContrastGraphic" />
+                            <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+                <!-- end of bubble effect-->
+            </button>
+        </div>
+    </div>
+
+    <!------------------------------ About ------------------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://cdn.glitch.global/fbf777df-a536-4696-8e24-d7c1303a6a5b/uou%20cover.jpg?v=1677112470207"
+                        alt="users">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me<span class="color">.</span></h2>
+                    <p class="mcontent">" Hi there! I'm a web developer with expertise in creating innovative and
+                        user-friendly websites. With skills in HTML, CSS, JavaScript, ReactJS, and various web
+                        development tools, I am committed to delivering high-quality work with exceptional attention to
+                        detail. I am passionate about exploring new technologies and finding creative solutions to
+                        complex problems. I take pride in delivering seamless user experiences and ensuring that my work
+                        meets the highest standards. As a developer, I'm always looking for ways to improve my skills
+                        and stay up-to-date with the latest industry trends. I'm excited to be part of the web
+                        development community and am eager to contribute my expertise to exciting new projects." </p>
+                    <ul>
+                        <li class="tab-links active-link" onclick="openTab('skills')">Skills</li>
+                        <li class="tab-links" onclick="openTab('education')">Education</li>
+                        <li class="tab-links" onclick="openTab('experiences')">Experiences</li>
+                    </ul>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <h3 class="bgcolor">ReactJS</h3>
+                        <p>Proficient in building ReactJS applications, including working with components, state
+                            management, and routing.</p>
+
+                        <h3 class="bgcolor">HTML5</h3>
+                        <p>Proficient in using HTML5 to structure web pages and create semantic markup that is
+                            accessible and SEO-friendly.</p>
+
+                        <h3 class="bgcolor">CSS3 (SCSS)</h3>
+                        <p>Skilled in creating responsive designs with CSS3 (including the use of pre-processors like
+                            SCSS), using Flexbox and CSS Grid to create dynamic layouts that adapt to different screen
+                            sizes.</p>
+
+                        <h3 class="bgcolor">JavaScript</h3>
+                        <p>Experienced in working with vanilla JavaScript and libraries like jQuery to create dynamic
+                            and interactive web pages.</p>
+
+                    </div>
+
+                    <div class="tab-contents education" id="education">
+                        <h3 class="bgcolor">2020 - present</h3>
+                        <p>Self Study | Online Course on Udemy </p>
+                        <p><i class="fas fa-check-circle"></i> Completed "25 Projects In Vanilla JavaScript Projects",
+                            covering various projects using ReactJS</p>
+                        <p><i class="fas fa-check-circle"></i> Completed "50 Projects In 50 Days - HTML, CSS &
+                            JavaScript", covering 50 front-end development projects using HTML, CSS, and JavaScript.</p>
+
+                        <h3 class="bgcolor">2016 - 2018</h3>
+                        <p>MS - Automotive Engineering | The University of Ulsan, Korea</p>
+
+                        <h3 class="bgcolor">2009 - 2015</h3>
+                        <p>BS - Advanced Material | HOCHIMINH City University of Technology, Vietnam</p>
+
+
+                    </div>
+
+                    <div class="tab-contents experiences" id="experiences">
+                        <h3 class="bgcolor">Junior Web Developer | Cuu Long Chemical | 2022 - present</h3>
+                        <div class="econtent">
+                            <p><i class="fas fa-check-circle"></i> Designed and developed responsive websites using
+                                HTML5, CSS3, JavaScript, and ReactJS. <br>
+                                <i class="fas fa-check-circle"></i> Maintained website functionality and performance by
+                                conducting regular testing and optimization.
+                                <br>
+                                <i class="fas fa-check-circle"></i> Collaborated with team members to troubleshoot and
+                                resolve technical issues, ensuring timely project delivery.
+                            </p>
+                        </div>
+
+                        <h3 class="bgcolor">IT Admin | Citizen Debt Service | 2019 - 2021</h3>
+                        <div class="econtent">
+                            <p><i class="fas fa-check-circle"></i> Maintained and supported IT infrastructure, including
+                                hardware, software, and networking systems. <br>
+                                <i class="fas fa-check-circle"></i> Provided technical support to users, troubleshooting
+                                and resolving issues to minimize downtime.
+                                <br>
+                                <i class="fas fa-check-circle"></i> Managed backups, security protocols, and system
+                                updates to ensure data security and system reliability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------ Services ------------------------------>
+    <div id="services">
+        <div class="container">
+            <h2 class="sub-title">My Services<span class="color">.</span></h2>
+            <div class="row">
+                <div class="services-col">
+                    <i class="fab fa-react"></i><br>
+                    <h3>ReactJS Development</h3>
+                    <p><i class="fas fa-code"></i> Building dynamic and interactive user interfaces using ReactJS.
+                        <br><i class="fas fa-code"></i> Developing custom React components to meet specific project
+                        requirements.
+                        <br><i class="fas fa-code"></i> Integrating React with other frontend and backend technologies
+                        as needed.
+                    </p>
+                </div>
+                <div class="services-col">
+                    <i class="fab fa-html5"></i><br>
+                    <h3>Web Development</h3>
+                    <p><i class="fas fa-code"></i> Developing websites and web applications using modern frontend
+                        technologies.
+                        <br><i class="fas fa-code"></i> Writing clean and maintainable HTML, CSS, and JavaScript code.
+                        <br><i class="fas fa-code"></i> Implementing responsive designs that look great on any device.
+                    </p>
+                </div>
+                <div class="services-col">
+                    <i class="far fa-object-group"></i><br>
+                    <h3>Responsive Design</h3>
+                    <p><i class="fas fa-code"></i> Ensuring that websites and web applications are optimized for
+                        performance and usability on all devices.
+                        <br><i class="fas fa-code"></i> Testing and debugging across multiple browsers and devices to
+                        ensure cross-browser compatibility.
+                        <br><i class="fas fa-code"></i> Using best practices to ensure that websites and web
+                        applications are accessible and user-friendly for all users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------ Portfolio ------------------------------>
+    <div id="portfolio">
+        <div class="container">
+            <h2 class="sub-title">My Work<span class="color">.</span></h2>
+            <div class="row">
+                <div class="portfolio-col">
+                    <img
+                        src="https://cdn.glitch.global/fbf777df-a536-4696-8e24-d7c1303a6a5b/CITIZEN.png?v=1677107503593">
+                    <div class="layer">
+                        <h3>IT Admin</h3>
+                        <p><i class="fas fa-arrow-right"></i> Managed computer network, provided technical support,
+                            conducted system updates and backups.
+                            <br><br><i class="fas fa-arrow-right"></i> Maintained and updated company website using web
+                            development technologies.
+                        </p>
+                        <a href="https://citizendebtservices.com/"><i class="fab fa-chrome"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-col">
+                    <img
+                        src="https://cdn.glitch.global/fbf777df-a536-4696-8e24-d7c1303a6a5b/CUULONG.png?v=1677108743609">
+                    <div class="layer">
+                        <h3>Web Developer</h3>
+                        <p><i class="fas fa-arrow-right"></i> Designed and developed responsive websites using HTML5,
+                            CSS3, JavaScript.
+                            <br><br><i class="fas fa-arrow-right"></i> Collaborated with team members to troubleshoot
+                            and resolve technical issues, ensured timely project delivery.
+                        </p>
+                        <a href="#"><i class="fab fa-chrome"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-col">
+                    <img
+                        src="https://cdn.glitch.global/fbf777df-a536-4696-8e24-d7c1303a6a5b/PNLOGO.png?v=1677109204266">
+                    <div class="layer">
+                        <h3>Front-end Developer</h3>
+                        <p><i class="fas fa-check-circle"></i> Completed "25 Projects In Vanilla JavaScript Projects"
+                            course on Udemy, covering various projects using ReactJS
+                            <br><br><i class="fas fa-check-circle"></i> Completed "50 Projects In 50 Days - HTML, CSS &
+                            JavaScript" course on Udemy, covering 50 front-end development projects using HTML, CSS, and
+                            JavaScript.
+                        </p>
+                        <a href="#"><i class="fab fa-chrome"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------ Contact ------------------------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <form>
+                        <input type="text" name="fullName" id="full-name" placeholder="Your Name">
+                        <input type="email" name="Email" id="email" placeholder="Your Email">
+                        <textarea name="message" id="message" rows="10" placeholder="Your Message ..."></textarea>
+                        <input type="submit" value="Submit" class="btn2">
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <h2 class="sub-title">My Contact<span class="color">.</span></h2>
+                    <p class="bgcolor"><i class="fas fa-phone"></i> Phone</p>
+                    <p>+84-982140047</p>
+                    <p class="bgcolor"><i class="fas fa-envelope"></i> Email</p>
+                    <p>nqphuong1690.hcmut@gmail.com</p>
+                    <p class="bgcolor"><i class="fas fa-user"></i> Social Profiles</p>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/johnny-nguyen-437ab9266/"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/jonny.phuong1/"><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------ Footer ------------------------------>
+    <footer>
+        <div class="container">
+            <p>Copyright © 2023 <span class="color">Phuong</span> Nguyen | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!------------------------------ Script ------------------------------>
+    <script src="script.js"></script>
+    <script src="./blossom/blossom.js"></script>
+</body>
+
+</html>
